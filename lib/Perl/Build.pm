@@ -17,12 +17,12 @@ use Devel::PatchPerl 0.88;
 use Perl::Build::Built;
 use Time::Local;
 
-our $CPAN_MIRROR = $ENV{PERL_BUILD_CPAN_MIRROR} || 'http://www.cpan.org';
+our $CPAN_MIRROR = $ENV{PERL_BUILD_CPAN_MIRROR} || 'http://mirrors.163.com/cpan';
 
 sub available_perls {
     my ( $class, $dist ) = @_;
 
-    my $url = "http://www.cpan.org/src/5.0/";
+    my $url = "http://mirrors.163.com/cpan/src/5.0/";
     my $html = http_get( $url );
 
     unless($html) {
